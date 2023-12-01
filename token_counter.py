@@ -26,6 +26,7 @@ app.title = "Token Counter"
 app.layout = dbc.Container([
  
    html.Br(),
+   
    dbc.Row([
        dbc.Col([
           dbc.Label("Paste text:", style = {"color":"white"}),
@@ -81,6 +82,19 @@ app.layout = dbc.Container([
      ], width = {"size": 7, "offset": 1})
      ]),
     html.Br(),
+    html.Div([html.B("Copyright")," ", DashIconify(icon="fa6-regular:copyright"), " ", 
+              html.B("2023-present")],
+        style = {"color":"#80b3ff", "text-align":"center"}),
+    
+    html.Div(
+        [html.B("Altay Yuzeir"), " ",
+    html.A(href = "https://github.com/AltayYuzeir/Dash_Token_counter/",
+             target = "_blank",
+             children=html.B(
+                 [ DashIconify(icon="fa:github"),"Github"],
+                 style = {"color":"#80b3ff", "text-align":"center"}
+                 ))
+    ], style = {"color":"#80b3ff", "text-align":"center"}),
     html.Br()
        
 ], fluid = True, style={'backgroundColor':'#333333'})
